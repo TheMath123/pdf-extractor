@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import * as pdfjsLib from "pdfjs-dist";
+// @ts-ignore
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
@@ -25,7 +26,8 @@ export default function Home() {
     reader.onload = async () => {
       const arrayBuffer = reader.result;
       if (arrayBuffer) {
-        const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+        const typedArray = new Uint8Array(arrayBuffer as ArrayBuffer);
+        const pdf = await pdfjsLib.getDocument({ data: typedArray }).promise;
         let extractedText = '';
 
         for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
