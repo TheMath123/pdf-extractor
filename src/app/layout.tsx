@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PDF Extractor",
-  description: "Extractor text for PDF files",
+  description: "Extractor text from PDF files",
 };
 
 
