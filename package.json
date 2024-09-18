@@ -12,7 +12,7 @@
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@types/pdfjs-dist": "^2.10.378",
-    "next": "14.2.7",
+    "next": "14.2.10",
     "pdf-parse": "^1.1.1",
     "pdfjs-dist": "2.10.377",
     "react": "^18",
